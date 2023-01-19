@@ -45,7 +45,6 @@
         Hours Worked: <input type="text" id="hoursWorked"><br>
         Hourly Rate: $<input type="text" id="hourlyRate"><br>
         Tax Rate (%): <input type="text" id="taxRate"><br>
-        Tax Minimum: <input type="text" id="minitax"><br>
         <input type="button" value="Calculate Salary" onclick="calculateSalary()">
     </form>
     <br>
@@ -56,10 +55,8 @@
             var hoursWorked = document.getElementById("hoursWorked").value;
             var hourlyRate = document.getElementById("hourlyRate").value;
             var taxRate = document.getElementById("taxRate").value;
-            var minitax = document.getElementById("minitax").vlaue;
             var salary = hoursWorked * hourlyRate;
-            var taxminimum = salary - minitax;
-            var taxedSalary = salary - taxminimum - (salary * (taxRate / 100));
+            var taxedSalary = salary - (salary * (taxRate / 100));
             document.getElementById("salary").innerHTML = "Salary: $" + taxedSalary;
         }
     </script>
