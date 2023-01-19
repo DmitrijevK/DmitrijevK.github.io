@@ -56,7 +56,7 @@
             var hoursWorked = document.getElementById("hoursWorked").value;
             var hourlyRate = document.getElementById("hourlyRate").value;
             var taxRate = document.getElementById("taxRate").value;
-            var minitax = document.getElementById("minitax")
+            var minitax = document.getElementById("minitax").vlaue;
             var salary = hoursWorked * hourlyRate;
             var taxminimum = salary - minitax;
             var taxedSalary = salary - taxminimum - (salary * (taxRate / 100));
