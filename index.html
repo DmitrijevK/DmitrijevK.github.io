@@ -1,64 +1,160 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        /*CSS styling for the calculator*/
-        form {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px auto;
-            width: 300px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        input[type="text"] {
-            width: 100%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        input[type="button"] {
-            width: 100%;
-            background-color: #4CAF50;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        input[type="button"]:hover {
-            background-color: #45a049;
-        }
-        #salary {
-            font-size: 20px;
-            font-weight: bold;
-            margin: 20px 0;
-        }
-    </style>
-</head>
-<body>
-    <form>
-        Hours Worked: <input type="text" id="hoursWorked"><br>
-        Hourly Rate: $<input type="text" id="hourlyRate"><br>
-        Tax Rate (%): <input type="text" id="taxRate"><br>
-        <input type="button" value="Calculate Salary" onclick="calculateSalary()">
-    </form>
-    <br>
-    <div id="salary"></div>
+	<title>Portfolio</title>
+	<!-- css files -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 
-    <script>
-        function calculateSalary() {
-            var hoursWorked = document.getElementById("hoursWorked").value;
-            var hourlyRate = document.getElementById("hourlyRate").value;
-            var taxRate = document.getElementById("taxRate").value;
-            var salary = hoursWorked * hourlyRate;
-            var taxedSalary = salary - (salary * (taxRate / 100));
-            document.getElementById("salary").innerHTML = "Salary: $" + taxedSalary;
-        }
-    </script>
-</body>
+	<link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
+	<meta name="author" content="KD">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+	<body>
+
+		<nav class="nav container void-background">
+
+			<div class="nav-left">
+				<a href="https://www.linkedin.com/in/kirill-dmitrijev-367631249/" class="nav-item">
+					<span class="icon">
+						<i class="fa fa-linkedin"></i>
+					</span>
+				</a>
+				<a href="https://github.com/DmitrijevK" class="nav-item">
+					<span class="icon">
+						<i class="fa fa-github"></i>
+					</span>
+				</a>
+				<a href="https://www.instagram.com/kirjuha_brawlstars/" class="nav-item">
+					<span class="icon">
+						<i class="fa fa-instagram"></i>
+					</span>
+				</a>				
+			</div>
+
+			<div class="nav-right nav-menu">
+				<a class="nav-item" href="#about">About</a>
+				<a class="nav-item" href="#social">Social</a>
+			</div>
+			<span class="nav-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</span>
+		</nav>
+				
+		<!-- About Me -->
+		<section id="about" class="section section-1">
+			<div class="container has-text-centered">
+				<img class="avatar" src="assets/img/profile.png">
+			</div>
+			<div class="container"></br>
+				<p class="intro">
+					Welcome to my portfolio! My name is Kirill, I am a university student studying Software Development. I have a lot of experience in development and also completed education in System Administration and Network Engineering. On this website you will find my work and projects that I have implemented.				</p>
+				
+			</div>
+		</section>
+		
+		<!-- Projects -->
+		<section  id="projects" class="section section-2">
+			<div class="container">
+				<div class="has-text-centered">
+					<h3 class="title is-3">Projects</h3>
+				</div>
+				
+				<div class="columns is-multiline is-desktop">
+					<!-- Project 1 -->
+					<div class="column">
+						<div class="box project-text">
+							<article>
+								<div>
+									<figure class="image project-figure">
+										<img src="assets/img/project-1.jpg" alt="Image">
+									</figure>
+								</div>
+								<div>			
+									<p>
+										<h1>Eliot BOT for Binance</h1>
+										<a class="w3-button button button1" href="https://github.com/DmitrijevK/Elliot_Formula_for-binance">See Project</a>  
+									</p>
+									
+								</div>
+							</article>
+						</div>
+					</div>
+					<!-- Project 2 -->
+					<div class="column">
+						<div class="box project-text">
+							<article>
+								<div>
+									<figure class="image project-figure">
+										<img src="assets/img/project-2.jpg" alt="Image">
+									</figure>
+								</div>
+								<div>			
+									<p>
+										<h1>Binance Bot</h1>
+										<a class="w3-button button button1" href="https://github.com/DmitrijevK/Binance_Bot">See Project</a>  
+									</p>
+								</div>
+							</article>
+						</div>
+					</div>
+			<div class="column">
+				<div class="box project-text">
+					<article>
+						<div>
+							<figure class="image project-figure">
+								<img src="assets/img/project-2.jpg" alt="Image">
+							</figure>
+						</div>
+						<div>			
+							<p>
+								<h1>Peer-To-Peer Chat</h1>
+								<a class="w3-button button button1" href="https://github.com/DmitrijevK/Peer-to-peer-Chat">See Project</a>  
+							</p>
+						</div>
+					</article>
+				</div>
+			</div>
+			<div class="column">
+				<div class="box project-text">
+					<article>
+						<div>
+							<figure class="image project-figure">
+								<img src="assets/img/project-2.jpg" alt="Image">
+							</figure>
+						</div>
+						<div>			
+							<p>
+								<h1>Linux VDS SETUP</h1>
+								<a class="w3-button button button1" href="https://github.com/DmitrijevK/LinuxConfigurator">See Project</a>  
+							</p>
+						</div>
+					</article>
+				</div>
+			</div>
+
+
+				</div>
+			</div>
+
+</div>
+</div>
+		</section>
+
+	
+		
+		<!-- Footer -->
+		<section class="section-4 has-text-centered container">
+			<p>
+				All Right Reserved
+			</p>
+		</section>
+		
+		<!-- Scripts  -->
+		<script src="controller.js"></script>		
+			
+	</body>	
 </html>
