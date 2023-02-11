@@ -27,3 +27,5 @@ fetch('https://api.github.com/users/DmitrijevK/repos')
     });
   })
   .catch(error => console.error(error));
+})
+.catch(error => console.error(error));
