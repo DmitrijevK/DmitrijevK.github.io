@@ -171,17 +171,17 @@ a.nav-item:hover {
 
 
 .card {
- width: 190px;
- height: 254px;
- background: rgb(255, 255, 255);
- transition: all 300ms;
- flex: 0 0 190px;
- margin-right: 20px;
+width: 190px;
+height: 250px;
+background-color: #373e3f;
+transition: all 300ms;
+flex: 0 0 190px;
+margin-right: 20px;
 }
 
 .card:hover {
- opacity: 0.8;
- transform: scale(1.10);
+opacity: 0.8;
+transform: scale(1.10);
 }
 
 
