@@ -8,7 +8,7 @@ fetch('https://api.github.com/users/DmitrijevK/repos')
       card.className = 'card';
 
       const cardHeader = document.createElement('header');
-      cardHeader.className = 'card-header';
+      cardHeader.className = '.card';
       cardHeader.innerHTML = `<p class="card-header-title">
         <a href="${repo.html_url}" target="_blank">${repo.name}</a>
       </p>`;
