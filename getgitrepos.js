@@ -8,7 +8,7 @@ fetch('https://api.github.com/users/DmitrijevK/repos')
       card.className = 'card';
 
       const cardHeader = document.createElement('header');
-      cardHeader.className = '.card';
+      cardHeader.className = 'card-header';
       cardHeader.innerHTML = `<p class="card-header-title">
         <a href="${repo.html_url}" target="_blank">${repo.name}</a>
       </p>`;
@@ -27,5 +27,3 @@ fetch('https://api.github.com/users/DmitrijevK/repos')
     });
   })
   .catch(error => console.error(error));
-})
-.catch(error => console.error(error));
