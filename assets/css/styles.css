@@ -29,9 +29,6 @@ section{
 
 .section-2 {
 	background-color: #202225;
-	display: flex;
-  	overflow-x: auto;
-  	overflow-y: hidden;
 }
 
 .section-3 {
