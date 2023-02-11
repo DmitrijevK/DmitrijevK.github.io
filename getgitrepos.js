@@ -1,46 +1,27 @@
-// Fetch information about the GitHub user's repositories
-async function getRepos(username) {
-  const response = await fetch(`https://api.github.com/users/${username}/repos`);
-  const repos = await response.json();
-  return repos;
-}
+const projectSection = document.querySelector('#project');
 
-// Create a card for each repository
-function createRepoCards(repos) {
-  const section = document.createElement('section');
-  section.classList.add('repo-section');
+fetch('https://api.github.com/users/DmitrijevK/repos')
+  .then(res => res.json())
+  .then(repos => {
+    repos.forEach(repo => {
+      const card = document.createElement('div');
+      card.className = 'card';
 
-  repos.forEach(repo => {
-    const card = document.createElement('div');
-    card.classList.add('repo-card');
+      const cardHeader = document.createElement('header');
+      cardHeader.className = 'card-header';
+      cardHeader.innerHTML = `<p class="card-header-title">
+        <a href="${repo.html_url}" target="_blank">${repo.name}</a>
+      </p>`;
+      card.appendChild(cardHeader);
 
-    const name = document.createElement('h2');
-    name.textContent = repo.name;
+      const cardContent = document.createElement('div');
+      cardContent.className = 'card-content';
+      cardContent.innerHTML = `<div class="content">
+        ${repo.description}
+      </div>`;
+      card.appendChild(cardContent);
 
-    const description = document.createElement('p');
-    description.textContent = repo.description || 'No description provided.';
-
-    const button = document.createElement('a');
-    button.textContent = 'View Repository';
-    button.href = repo.html_url;
-    button.target = '_blank';
-
-    card.appendChild(name);
-    card.appendChild(description);
-    card.appendChild(button);
-
-    section.appendChild(card);
-  });
-
-  return section;
-}
-
-// Display the repository cards on the page
-async function displayRepos(username) {
-  const repos = await getRepos(username);
-  const repoCards = createRepoCards(repos);
-  document.body.appendChild(repoCards);
-}
-
-// Call the displayRepos function with the GitHub username
-displayRepos('GitHubUsername');
+      projectSection.appendChild(card);
+    });
+  })
+  .catch(error => console.error(error));
