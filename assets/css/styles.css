@@ -29,6 +29,9 @@ section{
 
 .section-2 {
 	background-color: #202225;
+	 display: flex;
+  	overflow-x: auto;
+  	overflow-y: hidden;
 }
 
 .section-3 {
@@ -165,11 +168,6 @@ a.nav-item:hover {
 	transform: translate(-50%, -50%);
 	text-align: center;
   }
-#project {
-  display: flex;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
 
 	.card {
   	flex: 0 0 190px;
