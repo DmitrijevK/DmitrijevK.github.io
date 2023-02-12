@@ -29,6 +29,10 @@ section{
 
 .section-2 {
 	background-color: #202225;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .section-3 {
@@ -173,7 +177,7 @@ height: 250px;
 background-color: #373e3f;
 transition: all 300ms;
 flex: 0 0 190px;
-margin-right: 20px;
+margin-bottom: 20px;
 }
 
 .card:hover {
@@ -198,6 +202,9 @@ transform: scale(1.10);
 
 	.nav-toggle span:hover {
 		background-color: #fff;
+	}
+	.section-2 {
+		flex-direction: column;
 	}
 
 }
