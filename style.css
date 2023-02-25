@@ -17,7 +17,7 @@
 		padding-bottom: 3rem;
 	}
 
-	.section-1 {
+	.section-1 {	
 		background: #202225;
 		height: 100px; 
 		background-image: url("background.jpg");
@@ -28,9 +28,6 @@
 
 	}
 
-	.section-1::before {
-		filter: brightness(20%);
-	}
 
 	.section-2 {
 		background-color: #202225;
@@ -41,7 +38,11 @@
 	}
 
 	.section-3 {
-		background-color: #373e3f;
+		background-color: #151616;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
 	}
 
 	.section-4 {
@@ -59,7 +60,7 @@
 
 	.avatar{
 		height:200px;
-		border-radius: 50%;
+		border-radius: 10%;
 	}
 
 	.intro-description{
@@ -178,12 +179,50 @@
 		transform: translate(-50%, -50%);
 		text-align: center;
 	}
+	.titlee {
+		color: #00d1b2;
+		font-size: 20px;
+		text-align: left;
+		padding-left: 4%;
+		padding-top: 2%;
+	}
+	.postdate {
+		color: white;
+		font-size: 12px;
+		text-align:right ;
+		padding-top: 10%;
+		padding-right: 2%;
+	}
+
+	.headerr {
+		color: white;
+		font-size: 18px;
+		text-align: left;
+		padding-left: 8%;
+		padding-top: 1%;
+	}
+
+	.head {
+		color: #00d1b2;
+		padding-left: 47%;
+		font-size: 25px;
+		text-align: left;
+		text-decoration: underline;
+		text-decoration-color: #fff;
+		text-underline-offset: 7px;
+	}
+	.textt {
+		color: white;
+		font-size: 16px;
+		text-align: left;
+		padding-left: 10%;
+	}
 
 
 	.card {
 		width: 190px;
 		height: 230px;
-		color: #fff;  /* Change the text color to white */
+		color: #fff;  
 		background-color: #2d2f2f6f;
 		transition: all 300ms;
 		flex: 0 0 190px;
@@ -193,17 +232,32 @@
 	.date {
 		font-size: 14px;
 		color: #00d1b2;
-		margin-top: 10px;  /* Increase the space above the date */
+		margin-top: 10px;  
 		padding-bottom: -40%;
 	}
 	.icon {
 		font-size: 24px;
 		color: #fff;
-		margin-top: 0px;  /* Increase the space above the date */
+		margin-top: 0px;  
 	}
 	.icon2 {
 		font-size: 14px;
-		color: #fff; /* Increase the space above the date */
+		color: #fff; 
+	}
+
+	.artic {
+		width: 800px;
+		height: 190px;
+		color: #fff;  
+		background-color: #2d2f2f6f;
+		transition: all 300ms;
+		flex: 0 0 190px;
+		margin-bottom: 30px;
+		border-radius: 10px;
+	}
+	.artic:hover {
+		opacity: 0.8;
+		transform: scale(1.10);
 	}
 
 	.card:hover {
@@ -213,7 +267,7 @@
 	.icon:hover {
 	font-size: 24px;
 	color: #00d1b2;
-	margin-top: 0;  /* Increase the space above the date */
+	margin-top: 0;  
 	}
 
 
@@ -239,3 +293,5 @@
 		}
 
 	}
+
+
