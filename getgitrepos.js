@@ -1,4 +1,4 @@
-const projectSection = document.querySelector('#project');
+const projectSection = document.querySelector('#projectss');
 
 fetch('https://api.github.com/users/DmitrijevK/repos')
   .then(res => res.json())
