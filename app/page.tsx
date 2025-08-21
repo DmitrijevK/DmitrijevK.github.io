@@ -7,18 +7,15 @@ import { LanguageToggle } from "@/components/language-toggle"
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-background flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Портфолио Кирилла</h1>
-        <p className="text-lg text-muted-foreground">
-          Системный администратор и сетевой инженер
-        </p>
-        <div className="mt-8">
-          <p className="text-sm text-muted-foreground">
-            Сайт успешно задеплоен на GitHub Pages!
-          </p>
-        </div>
+    <main className="min-h-screen bg-background">
+      <div className="fixed top-4 right-4 z-50">
+        <LanguageToggle />
       </div>
+      <HeroSection />
+      <AboutSection />
+      <RepositoryCarousel />
+      {/* <BlogSection /> */}
+      <ContactSection />
     </main>
   )
 }
