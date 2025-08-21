@@ -12,7 +12,7 @@ const nextConfig = {
   // Настройки для GitHub Pages (github.io домен)
   output: 'export',
   trailingSlash: true,
-  // Убираем basePath и assetPrefix для github.io домена
+  // Для репозитория DmitrijevK.github.io не нужны basePath и assetPrefix
 }
 
 export default nextConfig
