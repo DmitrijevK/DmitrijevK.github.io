@@ -59,12 +59,10 @@ export function RepositoryCarousel() {
         setCurrentIndex(0)
       } else {
         console.error("Failed to fetch repositories")
-        // Fallback к mock данным если API недоступен
         setRepos(getMockRepositories())
       }
     } catch (error) {
       console.error("Error fetching repositories:", error)
-      // Fallback к mock данным при ошибке
       setRepos(getMockRepositories())
     } finally {
       setIsLoading(false)
