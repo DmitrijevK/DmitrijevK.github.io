@@ -24,17 +24,13 @@ jobs:
         run: npm --version
         
       - name: Install dependencies
-        run: npm ci
-        env:
-          NODE_ENV: production
+        run: npm install
         
       - name: Show installed packages
         run: npm list --depth=0
         
       - name: Build project
         run: npm run build
-        env:
-          NODE_ENV: production
         
       - name: List build output
         run: ls -la out/
