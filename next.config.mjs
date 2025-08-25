@@ -9,8 +9,12 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  output: 'export',
   trailingSlash: true,
+  allowedDevOrigins: [
+    '127.0.0.1',
+    'localhost',
+    '192.168.56.1'
+  ],
 }
 
 export default nextConfig

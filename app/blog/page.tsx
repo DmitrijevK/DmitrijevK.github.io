@@ -1,8 +1,8 @@
+import { getAllPosts, getAllTags } from "@/lib/posts"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Calendar, Clock, ArrowRight, BookOpen } from "lucide-react"
-import { getAllPosts } from "@/lib/posts"
+import { Calendar, Clock, ArrowRight, BookOpen, Tag } from "lucide-react"
 import Link from "next/link"
 
 const staticPosts = [
@@ -27,32 +27,68 @@ const staticPosts = [
     image: "/vmware-security.png",
     published: true,
     excerpt: "Виртуализация стала основой современной IT-инфраструктуры, но с ростом популярности VMware vSphere растут и угрозы безопасности..."
+  },
+  {
+    id: "penetration-testing-guide",
+    title: "Пентестинг корпоративных сетей: методология и инструменты",
+    description: "Мой опыт проведения тестирования на проникновение в корпоративных сетях и анализ наиболее эффективных инструментов.",
+    date: "2024-01-01",
+    readTime: "15 мин",
+    tags: ["Pentesting", "Security", "Network", "Kali Linux"],
+    image: "/penetration-testing-network-security.png",
+    published: true,
+    excerpt: "Тестирование на проникновение (пентестинг) является критически важным компонентом комплексной стратегии кибербезопасности..."
   }
 ]
 
-export async function BlogSection() {
-  let posts = getAllPosts().slice(0, 4)
+const staticTags = ["Python", "CISCO", "Automation", "VMware", "Security", "Infrastructure", "Network", "Kali Linux"]
+
+export default async function BlogPage() {
+  let posts = getAllPosts()
+  let tags = getAllTags()
   
   if (posts.length === 0) {
     posts = staticPosts
+    tags = staticTags
   }
 
   return (
-    <section className="py-20 px-4 bg-muted/30">
-      <div className="container max-w-6xl mx-auto">
+    <main className="min-h-screen bg-background">
+      <div className="container max-w-6xl mx-auto py-20 px-4">
+        {/* Заголовок */}
         <div className="text-center mb-16">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
+          <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">
             <span className="flex items-center justify-center space-x-3">
-              <BookOpen className="w-8 h-8 text-purple-600" />
-              <span>Insights, configs, and lessons from the field</span>
+              <BookOpen className="w-10 h-10 text-purple-600" />
+              <span>Блог</span>
             </span>
-          </h2>
+          </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Делюсь опытом работы с сетевыми технологиями, системным администрированием и кибербезопасностью
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        {/* Фильтр по тегам */}
+        <div className="mb-12">
+          <div className="flex items-center space-x-2 mb-4">
+            <Tag className="w-5 h-5 text-muted-foreground" />
+            <span className="text-sm font-medium text-muted-foreground">Фильтр по тегам:</span>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <Badge
+                key={tag}
+                variant="secondary"
+                className="cursor-pointer hover:bg-purple-100 dark:hover:bg-purple-900/20"
+              >
+                {tag}
+              </Badge>
+            ))}
+          </div>
+        </div>
+
+        {/* Список постов */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {posts.map((post, index) => (
             <Card
               key={post.id}
@@ -84,7 +120,9 @@ export async function BlogSection() {
                     {post.title}
                   </h3>
 
-                  <p className="text-muted-foreground mb-4 leading-relaxed">{post.excerpt}</p>
+                  <p className="text-muted-foreground mb-4 leading-relaxed">
+                    {post.excerpt || post.description}
+                  </p>
 
                   <div className="flex items-center justify-between">
                     <div className="flex flex-wrap gap-2">
@@ -112,19 +150,19 @@ export async function BlogSection() {
           ))}
         </div>
 
-        <div className="text-center">
-          <Link href="/blog">
+        {/* Пагинация или "Назад" */}
+        <div className="text-center mt-12">
+          <Link href="/">
             <Button
               variant="outline"
               size="lg"
               className="border-purple-600 text-purple-600 hover:bg-purple-50 dark:hover:bg-purple-900/20 bg-transparent"
             >
-              Все статьи
-              <ArrowRight className="ml-2 w-5 h-5" />
+              ← Назад на главную
             </Button>
           </Link>
         </div>
       </div>
-    </section>
+    </main>
   )
 }
