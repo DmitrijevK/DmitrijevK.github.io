@@ -1,3 +1,13 @@
+---
+title: "Graphene OS и кому он нужен"
+description: "Анонимный телефон на Андроид"
+date: "2025-08-28"
+readTime: "2 мин"
+tags: ["Анонимность", "Безопастность", "Android"]
+image: "/graphene-os.png"
+published: true
+---
+
 # GrapheneOS: Android с упором на безопасность и приватность
 
 ## 1. Введение
