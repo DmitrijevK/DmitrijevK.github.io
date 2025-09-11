@@ -103,7 +103,7 @@ export function ContactSection() {
             </pre>
           </div>
           <p className="text-sm text-muted-foreground">
-            © 2024 Кирилл. Создано с помощью Next.js и любви к технологиям.
+            © 2024 Kirill Dmitrijev. All right reserved.
           </p>
         </div>
       </div>
