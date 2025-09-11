@@ -46,6 +46,17 @@ const translations = {
     "blog.description": "Делюсь знаниями и опытом в области системного администрирования",
     "blog.readMore": "Читать далее",
 
+    // Career Section
+    "career.title": "Карьерный путь",
+    "career.description": "Мой профессиональный опыт в области IT и системного администрирования",
+    "career.types.work": "Работа",
+    "career.types.education": "Образование",
+    "career.types.certification": "Сертификация",
+    "career.stats.years": "Лет опыта",
+    "career.stats.projects": "Проектов",
+    "career.stats.technologies": "Технологий",
+    "career.stats.satisfaction": "Довольных клиентов",
+
     // Contact Section
     "contact.title": "Связаться со мной",
     "contact.description": "Готов обсудить новые проекты и возможности сотрудничества",
@@ -87,6 +98,17 @@ const translations = {
     "blog.title": "Latest Articles",
     "blog.description": "Sharing knowledge and experience in system administration",
     "blog.readMore": "Read more",
+
+    // Career Section
+    "career.title": "Career Path",
+    "career.description": "My professional experience in IT and system administration",
+    "career.types.work": "Work",
+    "career.types.education": "Education",
+    "career.types.certification": "Certification",
+    "career.stats.years": "Years Experience",
+    "career.stats.projects": "Projects",
+    "career.stats.technologies": "Technologies",
+    "career.stats.satisfaction": "Client Satisfaction",
 
     // Contact Section
     "contact.title": "Get in touch",
