@@ -1,3 +1,4 @@
+import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
 import { AboutSection } from "@/components/about-section"
 import { CareerSection } from "@/components/career-section"
@@ -9,6 +10,7 @@ import { LanguageToggle } from "@/components/language-toggle"
 export default async function HomePage() {
   return (
     <main className="min-h-screen bg-background">
+      <Header />
       <div className="fixed top-4 right-4 z-50">
         <LanguageToggle />
       </div>

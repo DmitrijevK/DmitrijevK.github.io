@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { LanguageSwitcher } from "@/components/language-switcher"
@@ -11,6 +12,7 @@ export function Header() {
   const { t } = useLanguage()
 
   const navItems = [
+    { href: "/tools", label: t("nav.tools") },
     { href: "#about", label: t("nav.about") },
     { href: "#repositories", label: t("nav.repositories") },
     { href: "#contact", label: t("nav.contact") },
@@ -26,13 +28,23 @@ export function Header() {
 
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {item.label}
-              </a>
+              item.href.startsWith("/") ? (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {item.label}
+                </a>
+              )
             ))}
           </nav>
 
@@ -49,14 +61,25 @@ export function Header() {
           <div className="md:hidden py-4 border-t border-border">
             <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.label}
-                </a>
+                item.href.startsWith("/") ? (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                )
               ))}
             </nav>
           </div>

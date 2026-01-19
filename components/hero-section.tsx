@@ -26,7 +26,7 @@ export function HeroSection() {
           {/* Terminal prompt */}
           <div className="flex items-center justify-center mb-6">
             <div className="flex items-center space-x-2 text-purple-600 font-mono text-sm">
-              <Terminal className="w-4 h-4" />
+              <Terminal className="w-4 h-4" /> 
               <span>kirill@portfolio:~$</span>
               <span className="animate-pulse">_</span>
             </div>
