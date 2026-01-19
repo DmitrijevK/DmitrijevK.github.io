@@ -168,16 +168,6 @@ export function FirewallGenerator() {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <div>
-          <h2 className="font-heading text-2xl font-bold mb-2">{t("tools.firewall.title")}</h2>
-          <p className="text-muted-foreground">{t("tools.firewall.description")}</p>
-        </div>
-        <Badge variant="secondary" className="flex items-center gap-2">
-          <Shield className="w-4 h-4" />
-          {t("tools.firewall.badge")}
-        </Badge>
-      </div>
 
       <Tabs value={outputFormat} onValueChange={(v) => setOutputFormat(v as "iptables" | "nftables")}>
         <TabsList>

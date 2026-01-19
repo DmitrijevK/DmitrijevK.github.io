@@ -68,6 +68,9 @@ const translations = {
     // Tools Section
     "tools.title": "IT Инструменты",
     "tools.description": "Полезные инструменты для системных администраторов и IT-специалистов",
+    "tools.search.placeholder": "Поиск инструментов...",
+    "tools.results": "Найдено",
+    "tools.noResults": "Инструменты не найдены. Попробуйте изменить поисковый запрос.",
     "tools.firewall.title": "Генератор правил фаервола",
     "tools.firewall.description": "Создавайте правила для iptables и nftables с удобным интерфейсом",
     "tools.firewall.badge": "Firewall",
@@ -151,6 +154,9 @@ const translations = {
     // Tools Section
     "tools.title": "IT Tools",
     "tools.description": "Useful tools for system administrators and IT professionals",
+    "tools.search.placeholder": "Search tools...",
+    "tools.results": "Found",
+    "tools.noResults": "No tools found. Try changing your search query.",
     "tools.firewall.title": "Firewall Rules Generator",
     "tools.firewall.description": "Create iptables and nftables rules with an easy-to-use interface",
     "tools.firewall.badge": "Firewall",
