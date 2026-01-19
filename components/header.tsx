@@ -37,20 +37,13 @@ export function Header() {
                   {item.label}
                 </Link>
               ) : (
-                <a
+                <Link
                   key={item.href}
-                  href={item.href}
-                  onClick={(e) => {
-                    e.preventDefault()
-                    const target = document.querySelector(item.href)
-                    if (target) {
-                      target.scrollIntoView({ behavior: "smooth", block: "start" })
-                    }
-                  }}
+                  href={`/${item.href}`}
                   className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {item.label}
-                </a>
+                </Link>
               )
             ))}
           </nav>
@@ -80,21 +73,14 @@ export function Header() {
                     {item.label}
                   </Link>
                 ) : (
-                  <a
+                  <Link
                     key={item.href}
-                    href={item.href}
-                    onClick={(e) => {
-                      e.preventDefault()
-                      setIsMenuOpen(false)
-                      const target = document.querySelector(item.href)
-                      if (target) {
-                        target.scrollIntoView({ behavior: "smooth", block: "start" })
-                      }
-                    }}
+                    href={`/${item.href}`}
                     className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 )
               ))}
               <div className="pt-4 border-t border-border">
