@@ -44,7 +44,7 @@ const skillCategories = [
 
 export function AboutSection() {
   return (
-    <section className="py-20 px-4 bg-muted/30">
+    <section id="about" className="py-20 px-4 bg-muted/30">
       <div className="container max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">About Me</h2>

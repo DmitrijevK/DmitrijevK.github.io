@@ -40,6 +40,13 @@ export function Header() {
                 <a
                   key={item.href}
                   href={item.href}
+                  onClick={(e) => {
+                    e.preventDefault()
+                    const target = document.querySelector(item.href)
+                    if (target) {
+                      target.scrollIntoView({ behavior: "smooth", block: "start" })
+                    }
+                  }}
                   className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {item.label}
@@ -49,7 +56,9 @@ export function Header() {
           </nav>
 
           <div className="flex items-center space-x-4">
-            <LanguageSwitcher />
+            <div className="hidden md:block">
+              <LanguageSwitcher />
+            </div>
 
             <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -74,13 +83,23 @@ export function Header() {
                   <a
                     key={item.href}
                     href={item.href}
+                    onClick={(e) => {
+                      e.preventDefault()
+                      setIsMenuOpen(false)
+                      const target = document.querySelector(item.href)
+                      if (target) {
+                        target.scrollIntoView({ behavior: "smooth", block: "start" })
+                      }
+                    }}
                     className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-                    onClick={() => setIsMenuOpen(false)}
                   >
                     {item.label}
                   </a>
                 )
               ))}
+              <div className="pt-4 border-t border-border">
+                <LanguageSwitcher />
+              </div>
             </nav>
           </div>
         )}
