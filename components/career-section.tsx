@@ -60,7 +60,7 @@ const careerData: CareerItem[] = [
     description: "Maintained Windows and Linux server environments, managed Active Directory, and implemented backup solutions. Improved system reliability and performance optimization.",
     technologies: ["Windows Server", "Linux", "Exchange", "SQL Server", "PowerShell"],
     icon: Building2,
-    type: "education"
+    type: "work"
   },
   {
     id: "education",
