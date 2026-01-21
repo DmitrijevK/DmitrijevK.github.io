@@ -10,6 +10,9 @@ import { useLanguage } from "@/contexts/language-context"
 import { FirewallGenerator } from "@/components/firewall-generator"
 import { SubnetCalculator } from "@/components/subnet-calculator"
 import { PasswordGenerator } from "@/components/password-generator"
+import { IPNetworkInfo } from "@/components/ip-network-info"
+import { SSLChecker } from "@/components/ssl-checker"
+import { Base64HashTool } from "@/components/base64-hash-tool"
 
 interface Tool {
   id: string
@@ -40,6 +43,15 @@ const tools: Tool[] = [
     icon: Network,
     component: SubnetCalculator,
     tags: ["subnet", "CIDR", "network", "IP"],
+  },
+  {
+    id: "ip-network-info",
+    title: "IP / Network Info",
+    description: "Get detailed information about any IP address: location, ISP, ASN, timezone, and network details.",
+    category: "Network",
+    icon: Globe,
+    component: IPNetworkInfo,
+    tags: ["IP", "geolocation", "network", "ISP", "ASN"],
   },
   {
     id: "dns-lookup",
@@ -76,6 +88,24 @@ const tools: Tool[] = [
     icon: Shield,
     component: PasswordGenerator,
     tags: ["password", "security", "generator"],
+  },
+  {
+    id: "ssl-checker",
+    title: "SSL Checker",
+    description: "Check SSL certificate validity, expiration date, certificate chain, SNI, and TLS versions for any domain.",
+    category: "Security",
+    icon: Shield,
+    component: SSLChecker,
+    tags: ["SSL", "TLS", "certificate", "security"],
+  },
+  {
+    id: "base64-hash-tool",
+    title: "Base64 / Hash Tool",
+    description: "Encode/decode Base64 strings and generate SHA-256 and SHA-512 hashes. Essential for data encoding and verification.",
+    category: "Security",
+    icon: Code,
+    component: Base64HashTool,
+    tags: ["base64", "hash", "SHA", "encode", "decode"],
   },
 ]
 
