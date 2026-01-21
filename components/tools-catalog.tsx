@@ -13,6 +13,7 @@ import { PasswordGenerator } from "@/components/password-generator"
 import { IPNetworkInfo } from "@/components/ip-network-info"
 import { SSLChecker } from "@/components/ssl-checker"
 import { Base64HashTool } from "@/components/base64-hash-tool"
+import { DockerComposeGenerator } from "@/components/docker-compose-generator"
 
 interface Tool {
   id: string
@@ -106,6 +107,15 @@ const tools: Tool[] = [
     icon: Code,
     component: Base64HashTool,
     tags: ["base64", "hash", "SHA", "encode", "decode"],
+  },
+  {
+    id: "docker-compose-generator",
+    title: "Docker Compose Generator",
+    description: "Generate docker-compose.yml for common services (nginx, postgres, redis) with ports and volumes.",
+    category: "System",
+    icon: Server,
+    component: DockerComposeGenerator,
+    tags: ["docker", "compose", "nginx", "postgres", "redis"],
   },
 ]
 

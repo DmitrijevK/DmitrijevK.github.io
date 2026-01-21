@@ -192,6 +192,20 @@ const translations = {
     "tools.base64.hashPlaceholder": "Хеш появится здесь...",
     "tools.base64.copy": "Копировать",
     "tools.base64.copied": "Скопировано!",
+
+    // Docker Compose Generator
+    "tools.compose.title": "Docker Compose Генератор",
+    "tools.compose.service": "Сервис",
+    "tools.compose.containerName": "Имя контейнера",
+    "tools.compose.ports": "Порты (host:container, по строке)",
+    "tools.compose.volumes": "Тома (host:container, по строке)",
+    "tools.compose.env": "Переменные окружения (KEY=value, по строке)",
+    "tools.compose.copy": "Копировать YAML",
+    "tools.compose.copied": "Скопировано!",
+    "tools.compose.reset": "Сбросить",
+    "tools.compose.helpTab": "Памятка",
+    "tools.compose.help1": "Добавляйте/правьте порты и тома построчно — YAML обновляется сразу.",
+    "tools.compose.help2": "Используйте именованные тома (например, pgdata:/var/lib/postgresql/data) для сохранения данных.",
   },
   en: {
     // Navigation
@@ -374,6 +388,20 @@ const translations = {
     "tools.base64.hashPlaceholder": "Hash will appear here...",
     "tools.base64.copy": "Copy",
     "tools.base64.copied": "Copied!",
+
+    // Docker Compose Generator
+    "tools.compose.title": "Docker Compose Generator",
+    "tools.compose.service": "Service",
+    "tools.compose.containerName": "Container name",
+    "tools.compose.ports": "Ports (host:container per line)",
+    "tools.compose.volumes": "Volumes (host:container per line)",
+    "tools.compose.env": "Environment variables (KEY=value per line)",
+    "tools.compose.copy": "Copy YAML",
+    "tools.compose.copied": "Copied!",
+    "tools.compose.reset": "Reset",
+    "tools.compose.helpTab": "Help",
+    "tools.compose.help1": "Add or adjust ports/volumes per line, YAML updates instantly.",
+    "tools.compose.help2": "Use named volumes (e.g. pgdata:/var/lib/postgresql/data) to persist data.",
   },
 }
 
