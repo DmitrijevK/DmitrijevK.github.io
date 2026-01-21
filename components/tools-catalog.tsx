@@ -8,6 +8,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } f
 import { Search, X, Shield, Network, Globe, Terminal, Server, Code, Database } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 import { FirewallGenerator } from "@/components/firewall-generator"
+import { SubnetCalculator } from "@/components/subnet-calculator"
 
 interface Tool {
   id: string
@@ -36,7 +37,7 @@ const tools: Tool[] = [
     description: "Calculate subnet masks, network addresses, and host ranges. Essential tool for network planning.",
     category: "Network",
     icon: Network,
-    component: () => <div>Subnet Calculator - Coming Soon</div>,
+    component: SubnetCalculator,
     tags: ["subnet", "CIDR", "network", "IP"],
   },
   {
