@@ -9,6 +9,7 @@ import { Search, X, Shield, Network, Globe, Terminal, Server, Code, Database } f
 import { useLanguage } from "@/contexts/language-context"
 import { FirewallGenerator } from "@/components/firewall-generator"
 import { SubnetCalculator } from "@/components/subnet-calculator"
+import { PasswordGenerator } from "@/components/password-generator"
 
 interface Tool {
   id: string
@@ -73,7 +74,7 @@ const tools: Tool[] = [
     description: "Generate secure passwords with customizable length and character sets. Perfect for system administration.",
     category: "Security",
     icon: Shield,
-    component: () => <div>Password Generator - Coming Soon</div>,
+    component: PasswordGenerator,
     tags: ["password", "security", "generator"],
   },
 ]
